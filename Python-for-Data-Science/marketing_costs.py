@@ -15,11 +15,11 @@ def desired_marketing_expenditure(marketing_expenditure, units_sold, desired_uni
 
     # Normalize input features using MinMaxScaler
     scaler = MinMaxScaler()
-    X_scaled = scaler.fit_transform(X)
+    x_scaled = scaler.fit_transform(X)
 
     # Train linear regression model
     model = LinearRegression()
-    model.fit(X_scaled, y)
+    model.fit(x_scaled, y)
 
     # Scale the desired units sold
     desired_scaled = scaler.transform(np.array([[desired_units_sold]]))
