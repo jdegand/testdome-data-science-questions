@@ -33,7 +33,7 @@ class MarketingCosts:
             marketing_expenditure = np.array(marketing_expenditure)
 
             # Initialize and train the Theil-Sen regressor
-            lm = TheilSenRegressor(max_subpopulation=10)
+            lm = TheilSenRegressor(max_subpopulation=10, random_state=42)
             lm.fit(units_sold, marketing_expenditure)
 
             # Predict required marketing expenditure for desired units sold
