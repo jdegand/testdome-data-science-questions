@@ -18,7 +18,7 @@ def train_and_predict(train_input_features, train_outputs, prediction_features):
                         iris species, one for each item in prediction_features
     """   
     # Initialize and train the SVM classifier
-    svm = SVC(kernel="linear")
+    svm = SVC(kernel="linear", C=1.0, gamma="scale")
     svm.fit(train_input_features, train_outputs)
 
     # Predict species for the given features
